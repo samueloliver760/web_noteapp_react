@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+:root {
+  --background-color: whitesmoke;
+  --font-color: black;
+  --color: black;
+}
+
+[data-theme='dark'] {
+  --background-color: black;
+  --font-color: whitesmoke;
+  --color: whitesmoke;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: QuickSand;
+  box-sizing: border-box;
+}
+
+.header input {
+  padding: 3px;
+  margin: 3px 2px;
+  background-color: transparent;
+  border-style: none;
+  border: 2px;
+  font-size: 20px;
+  color: black;
+}
+
+input,
+textarea {
+  padding: 12px;
+  margin: 15px 0;
+  background-color: transparent;
+  color: var(--color);
+  border: 1px solid var(--color);
+  border-radius: 4px;
+  resize: none;
+  font-size: 15px;
+}
+
+.note-search {
+  display: flex;
+  align-items: center;
+  background-color: #DBDBD0;
+  border-radius: 10px;
+  padding: 1px;
+  max-height: 50px;
+  margin-bottom: 30px;
+}
+
+#search {
+  border-style: none;
+  display: flex;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color);
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 16px;
+  background-color: #92b4ec;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #92b4ec;
+}
+
+.header h1 {
+  margin: 15px 0;
+  flex: 1;
+  font-size: 35px;
+  color: #FDFD96;
+}
+
+.body {
+  max-width: 1000px;
+  margin: 16px auto;
+  padding: 12px;
+}
+
+.body h2 {
+  font-weight: normal;
+  margin: 15px 0;
+}
+
+.wrapper {
+  margin: auto;
+  position: relative;
+}
+
+.form-add h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.form-add {
+  margin: auto;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#taking_note {
+  padding: 5px;
+  margin: 35px;
+}
+
+#form-add {
+  margin: 0 auto;
+  min-width: 450px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+#form-title,
+#form-content {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#form-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#max {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+
+#form-content {
+  min-height: 175px;
+  margin-top: 0px;
+}
+
+#button_submit {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #77DD77;
+  margin-bottom: 5px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+  gap: 15px;
+  margin-bottom: 48px;
+  margin-top: 20px;
+}
+
+.empty {
+  text-align: center;
+  color: red;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.note-item {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-item_isi {
+  flex: 1 1;
+}
+
+.note-item_header {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.note-item_dibuat {
+  font-size: 20px;
+  color: blue;
+  margin-bottom: 15px;
+}
+
+.note-item_body {
+  font-size: 18px;
+  padding: 15px;
+  margin: 5px;
+  text-align: justify;
+}
+
+.note-item-action {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.note-item_delete,
+.note-item_archieve {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 12px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-item-content {
+  background-color: white;
+  border-radius: 4px;
+  padding: 0px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+}
+
+.detail-item-content {
+  background-color: var(--background-color);
+  min-height: 544px;
+  justify-content: center;
+  padding: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.detail-item_header {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.detail-item_dibuat {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-item_isi {
+  font-size: 25px;
+  width: 1000px;
+  text-align: justify;
+}
+.navigation {
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.navigation a::after {
+  color: var(--color)
+}
+.navigation li {
+  width: fit-content;
+  margin: 30px;
+  display: inline;
+}
+
+.note-error {
+  padding: 100px;
+  height: 614px;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-item_header {
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 60px;
+}
+
+.error-item_subheader {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.login-page {
+  padding: 10px;
+  width: 800px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+}
+
+.login-page h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.login-input {
+  text-align: center;
+  margin: auto;
+}
+
+.input {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.button_masuk {
+  width: 260px;
+  background-color: yellowgreen;
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 500px) {
+  .note-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .note-search input {
+    min-width: 400px;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-add {
+    display: block;
+  }
+
+  #taking_note {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  height: 50px
+}
+
+.image-search {
+  margin: 10px;
+}
+
+.logout {
+  font-size: 25px;
+  color: blue;
+  margin: 5px;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 500px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #92b4ec;
+  }
+}
+
